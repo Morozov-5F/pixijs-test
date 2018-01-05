@@ -1,0 +1,42 @@
+{
+  "name": "pixijs-test",
+  "version": "0.1.0",
+  "description": "Pixi.js test application",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --config webpack.config.dev.js --display 'verbose' --progress --profile",
+    "serve": "webpack-dev-server --config webpack.config.dev.js --color --progress --inline --hot",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Morozov-5F/pixijs-test.git"
+  },
+  "author": "Evgeniy Morozov",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/Morozov-5F/pixijs-test/issues"
+  },
+  "homepage": "https://github.com/Morozov-5F/pixijs-test#readme",
+  "devDependencies": {
+    "awesome-typescript-loader": "^3.4.1",
+    "css-loader": "^0.28.7",
+    "filemanager-webpack-plugin": "^1.0.19",
+    "html-webpack-plugin": "^2.30.1",
+    "inline-source-map": "^0.6.2",
+    "path": "^0.12.7",
+    "style-loader": "^0.19.1",
+    "tslint": "^5.8.0",
+    "typedoc": "^0.9.0",
+    "typescript": "^2.6.2",
+    "typings-for-css-modules-loader": "^1.7.0",
+    "webpack": "^3.10.0",
+    "webpack-dashboard": "^1.0.2",
+    "webpack-dev-server": "^2.9.7",
+    "webpack-merge": "^4.1.1"
+  },
+  "dependencies": {
+    "@types/pixi.js": "^4.6.2",
+    "pixi.js": "^4.6.2"
+  }
+}

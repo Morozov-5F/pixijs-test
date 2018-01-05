@@ -57,3 +57,8 @@ typings/
 # dotenv environment variables file
 .env
 
+# Ignore a webpack output directory
+dev/
+
+# Ignore Visual Studo Code settings
+.vscode/
