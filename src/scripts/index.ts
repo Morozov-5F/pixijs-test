@@ -10,18 +10,36 @@ const setupApplication = () => {
 
     // Configure application options
     const appOptions: PIXI.ApplicationOptions = {
-        width:  256,
-        height: 256,
+        width:  800,
+        height: 600,
         antialias: false,
         transparent: false,
         view: canvas,
         resolution: 1,
-        backgroundColor: 0x00000000,
+        backgroundColor: 0xFFFFFF,
         forceCanvas: true,
     };
 
     const app = new PIXI.Application(appOptions);
     PIXI.utils.sayHello("canvas");
+
+    const text: PIXI.Text = new PIXI.Text("Unknown");
+    app.stage.addChild(text);
+
+    app.ticker.add((deltaTime: number): void => {
+        text.text = (app.ticker.FPS / deltaTime).toString();
+    });
+
+    app.ticker.stop();
+
+    const render = (): void => {
+        app.ticker.update(performance.now());
+        app.render();
+
+        requestAnimationFrame(render);
+    };
+
+    render();
 };
 
 setupApplication();
